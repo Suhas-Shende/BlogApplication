@@ -1,0 +1,18 @@
+{% extends "home/index.html" %}
+
+
+{% block title %}
+Blog Post
+{% endblock %}
+
+{% block blogactive %} active {% endblock %}
+
+
+
+{% block body %}
+    <article class="container my-3">
+         <h2 class="display-5 link-body-emphasis mb-1">{{ post.title }}</h2>
+          <p class="blog-post-meta">{{ post.timestamp }} by <a href="/about">{{  post.author }}</a></p>
+           <p>{{ post.content }}</p> 
+{% endblock %}
+           
