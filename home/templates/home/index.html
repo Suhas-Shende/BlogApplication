@@ -17,7 +17,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark  bg-dark" >
       <div class="container-fluid">
-        <a class="navbar-brand" href="/">My blog</a>
+        <a class="navbar-brand" href="/">Travel blog</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -25,24 +25,24 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link {% block homeactive %} {% endblock %}" aria-current="page" href="/">Home</a>
-            </li>
+            </li> -->
+            <li class="nav-item">
+             <a class="nav-link {% block blogactive %} {% endblock %}" href="/">Blog</a>
+           </li>
             <li class="nav-item">
               <a class="nav-link {% block contactactive %} {% endblock %}" href="/contact">Contact</a>
             </li>
              <li class="nav-item">
-              <a class="nav-link {% block blogactive %} {% endblock %}" href="/blog">Blog</a>
-            </li>
-             <li class="nav-item">
-              <a class="nav-link {% block aboutactive %} {% endblock %}" href="/about">About us</a>
+              <a class="nav-link {% block createactive %} {% endblock %}" href="/create">Create</a>
             </li>
             
            
          
           </ul>
           <form  action="/search" method="get" class="d-flex" role="search" >
-            <input name="query" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <input name="query" class="form-control me-2" type="search" placeholder="search title of blog" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
         </div>
@@ -54,6 +54,26 @@
     {% block body %}
     
 {% endblock %}
+
+<footer class="bg-dark text-white text-center text-lg-start mt-5">
+  <div class="container p-4">
+    <div class="row">
+
+      <div class="col-lg-12 text-center">
+        <h6 class="text-uppercase fw-bold">Created by Suhas Shende</h6>
+        <p class="mb-0">© {{ now|date:"Y" }} All rights reserved.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="text-center p-3 bg-secondary">
+    Designed & Developed with ❤️ by <strong>Suhas</strong>
+  </div>
+</footer>
+
+
+
     <!-- Bootstrap JS (Popper + Bootstrap Bundle) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>

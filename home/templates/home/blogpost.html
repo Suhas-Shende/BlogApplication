@@ -1,0 +1,30 @@
+{% extends "home/index.html" %}
+
+
+{% block title %}
+Blog Post
+{% endblock %}
+
+{% block blogactive %} active {% endblock %}
+
+
+
+{% block body %}
+    <article class="container my-3">
+            {% if post.image %}
+            <img src="{{ post.image.url }}" alt="Post Image" 
+       class="img-fluid rounded"
+       style="width: 100%; max-width: 600px; height: 350px; object-fit: cover;">
+
+
+
+        <!-- <img src="{{ post.image.url }}" alt="Post Image" style="max-width:100%; height:auto;"> -->
+    {% else %}
+        <p>No image uploaded for this post.</p>
+    {% endif %}
+         <h2 class="display-5 link-body-emphasis mb-1">{{ post.title }}</h2>
+          <p class="blog-post-meta">{{ post.timestamp }} by <strong>{{  post.author }}</strong></p>
+           <p>{{ post.content }}</p> 
+{% endblock %}
+         
+
